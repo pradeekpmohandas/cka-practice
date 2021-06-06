@@ -1,0 +1,31 @@
+#from host - emptydir
+  volumes:
+  - name: redis-storage
+    emptyDir: {}
+---
+#from host - specific path
+  volumes:
+  - name: test-volume
+    hostPath:
+      path: /data
+      type: Directory    
+---
+#from pvc
+  volumes:
+      - name: mypd
+        persistentVolumeClaim:
+          claimName: myclaim
+
+---
+#from configMap          
+  volumes:
+      - name: mypd
+        configMap:
+          name: myclaim
+
+---
+#from secret
+  volumes:
+    - name: secret-volume
+      secret:
+        secretName: test-secret          
