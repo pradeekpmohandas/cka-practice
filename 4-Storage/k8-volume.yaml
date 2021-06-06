@@ -3,7 +3,7 @@
   - name: redis-storage
     emptyDir: {}
 ---
-#from host - specific path
+#from host - specific path on host
   volumes:
   - name: test-volume
     hostPath:

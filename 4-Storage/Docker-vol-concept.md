@@ -18,3 +18,8 @@ docker run -d \
 
 Storage Driver --> Help manage storage on img/containers
 Volume Driver --> local, 3rd party storage providers(cloud)
+
+
+#note
+in Mac docker runs on vm, to access shell of vm 
+https://stackoverflow.com/questions/63445657/why-i-am-getting-screen-is-terminating-error-in-macos/63595817#63595817
