@@ -7,7 +7,7 @@ authentication via  serviceAccount (for machines)
 
 -----
 Kube api pod env variable [not used]
--- basic-auth-file=user-details.csv #for static 
+-- basic-auth-file=user-details.csv #for static pass, envVariable of apiserver 
 curl <kube-api> -u user:pass  #for access to kubeAPI
 user-details.csv
 [user1,pass1,user1_id,groupid]
@@ -19,6 +19,10 @@ curl <kube-api> --header "Authorization : Bearer TOKEN"
 
 
 for certs
--- basic-auth-file=
-curl <kube-api> --key admin.key --cert admin.cert --cacert ca.cert  #to call server, these details can be moved to kube-config file 
+ #envVariable of apiserver for cert based authorization
+ - --allow-privileged=true
+ - --authorization-mode=Node,RBAC
+curl <kube-api> --key admin.key --cert admin.cert --cacert ca.cert  #to call server, these details can be 
+
+==> move the above to a file we get "kube-config" file  
 

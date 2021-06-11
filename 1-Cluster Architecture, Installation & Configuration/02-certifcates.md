@@ -12,3 +12,6 @@ CA authority --> ca.crt ca.key --> to sign all the above certs --> CERT created 
 
 certs should contain group name, for system components prefix "system:"
 for admin user prefix "system:master" in group 
+
+to view cert details 
+openssl x509 -in some.crt -text -noout
