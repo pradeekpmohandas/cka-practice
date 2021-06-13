@@ -14,3 +14,14 @@ default location $HOME/.kube/config
 kubectl can we used to access multiple cluster with multiple user, this is controlled by kubeconfig file
 
 kubectl config user-context prod-user@production #will check the file content in kubeconfig
+
+###
+Authorization
+role & rolebinding
+clusterrole & clusterrolebinding
+#to know -> api group and verbs
+
+
+#securitycontext
+both pod level and container level 
+to run pod with specific user, give access to volume 
