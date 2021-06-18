@@ -3,8 +3,8 @@ similar to schedulerName: <>
 
 * nodeSelector: tell scheduler to place in particular node - single key:value, for more advanced expression greater than/less than - nodeaffinity/anti affinity used
 
-* Node affinity is property of pod that attrack them to set of nodes
+* Node affinity is property of pod that attract them to set of nodes
 
-* anti affinity opposite
+* anti affinity - opposite
 
 * Taints are property of node to repel a set of pods

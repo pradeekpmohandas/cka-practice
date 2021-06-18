@@ -8,7 +8,7 @@ kind: CertificateSigningRequest
 k certifcate approve <csr-name>
 
 #once approved check the status section to get the issued certificate
-the above cert is used to authenticate upon each kubectl common, cert is moved to file called kubeconfig
+the above cert is used to authenticate upon each kubectl cmd, cert is moved to file called kubeconfig
 
 default location $HOME/.kube/config
 kubectl can we used to access multiple cluster with multiple user, this is controlled by kubeconfig file

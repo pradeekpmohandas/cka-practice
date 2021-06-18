@@ -5,7 +5,7 @@ kubeApi --> kubeapi.crt kubeapi.key
 etcd    --> etcd.crt  etcd.key
 kubelet  --> kubelet.crt kubelet.key | each node have kubelet config file 
 scheduler --> scheduler.crt scheduler.key
-kubeporoxy --> kubeproxy.crt kubeproxy.key
+kubeproxy --> kubeproxy.crt kubeproxy.key
 ######
 admin user  --> admin.crt admin.key --> to communicate to kubeApi
 CA authority --> ca.crt ca.key --> to sign all the above certs --> CERT created 1st (self signed)

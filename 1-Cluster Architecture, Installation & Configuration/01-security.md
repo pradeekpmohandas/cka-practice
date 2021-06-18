@@ -23,6 +23,5 @@ for certs
  - --allow-privileged=true
  - --authorization-mode=Node,RBAC
 curl <kube-api> --key admin.key --cert admin.cert --cacert ca.cert  #to call server, these details can be 
-
-==> move the above to a file we get "kube-config" file  
+==> moved the above to a file, we get "kube-config" file  this is used by kubectl to authenticate
 
