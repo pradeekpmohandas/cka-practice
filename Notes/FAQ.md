@@ -2,7 +2,7 @@
 root@controlplane:~# kubectl taint node controlplane node-role.kubernetes.io/master:NoSchedule-
 node/controlplane untainted
 
-#label pod with app=jio
+#label pod with app=jio, cant be done with deploy
 k run jio --image=nginx --labels=app=jio
 
 #Deploy a DaemonSet for FluentD Logging
@@ -25,6 +25,6 @@ kdry run static-busybox --image=busbox --command sleep 1000
 - --leader-elect=false
 - --port=10282
 - --scheduler-name=my-scheduler
-- --secure-port=0
+- --secure-port=0 #to disabled https
 change HTTPS to HTTP n port in health url section
 k apply -f deploy-as-a-pod.yaml
