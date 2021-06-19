@@ -118,6 +118,7 @@ k taint
 k label
 k config 
 k logs
+k auth
 
 ######################## FLAGS #############
 k get po -A 

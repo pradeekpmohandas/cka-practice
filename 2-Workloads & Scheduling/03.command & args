@@ -1,3 +1,0 @@
-Commands & Args
-ENTRYPOINT in dockerfile = COMMAND in pod 
-CMD in docker file = args in pod

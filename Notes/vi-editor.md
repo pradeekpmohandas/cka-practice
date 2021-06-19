@@ -1,4 +1,5 @@
-use below with <esc>
+
+# use below with <esc>
 :set number
 :set autoindent
 
@@ -14,5 +15,5 @@ use below with <esc>
 <esc> /search   #anyitem to search
 <esc> gg        #begining of line
 <esc> G         #end of line
- 
+
 ---

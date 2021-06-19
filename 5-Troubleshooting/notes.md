@@ -1,4 +1,5 @@
-#when kubectl dont respond
-docker ps -a #from master node 
+# when kubectl dont respond
+docker ps -a 
 docker logs #to check logs of system components
-journalctl 
+systemctl status <service-name>
+journalctl | grep <service-name> #to check logs of service
