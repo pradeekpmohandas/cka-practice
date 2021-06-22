@@ -12,3 +12,20 @@ ssh into node 
 upgrade kubeadmin                      ==> apt install kubeadm=1.19.0-00 #same version as master
 update -kubelete,kubectl               ==> 
 apt-get install -y --allow-change-held-packages kubelet=1.19.0-00 kubectl=1.19.0-00
+
+
+# k8 versions
+v1.18.3 
+Major.minor.patch
+
+# control plane components - packed with offical k8s project
+kube-api server
+kube-controller manager
+kube-scheduler 
+kube-proxy
+kubelet
+---- 
+# other project
+etcd cluster
+core dns
+kubectl - client to access cluster

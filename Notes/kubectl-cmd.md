@@ -119,6 +119,8 @@ k label
 k config 
 k logs
 k auth
+k cordon/uncordon nodeName
+k drain nodeName
 
 ######################## FLAGS #############
 k get po -A 
@@ -128,6 +130,7 @@ k get po --selector app=neo
 k get po --selector env=prod,bu=finance,tier=frontend
 k -n kube-system top pod --sort-by=cpu
 k -n kube-system top pod --sort-by=memory
+k drain node01 --ignore-daemonsets
 
 
 ###################### short notes ##############
