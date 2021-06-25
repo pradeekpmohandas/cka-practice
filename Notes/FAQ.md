@@ -30,3 +30,21 @@ make a copy of static scheduler pod in /temp, then edit the following
 change HTTPS to HTTP n port in health & ready url section
 
 k apply -f deploy-as-a-pod.yaml
+
+# what is the latest upgradable version
+kubeadm upgrade plan - list all possible updates of each component
+
+# back-up n restore etcd db - do it again
+BACKUP
+- need server details to connect to db, endpoint not provided because localhost
+ETCDCTL_API=3 etcdctl --cacert="/etc/kubernetes/pki/etcd/ca.crt" --cert="/etc/kubernetes/pki/etcd/server.crt" --key="/etc/kubernetes/pki/etcd/server.key" snapshot save /opt/snapshot-pre-boot.db
+
+- RESTORE -> to new directory which dont exist
+ETCDCTL_API=3 etcdctl snapshot restore /opt/snapshot-pre-boot.db --data-dir="/root/etcd-bkp"
+- change volume mount
+ volumes:
+  - hostPath:
+      path: /var/lib/etcd-from-backup
+      type: DirectoryOrCreate
+    name: etcd-data
+
