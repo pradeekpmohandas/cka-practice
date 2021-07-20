@@ -7,3 +7,5 @@ alias kdry="kubectl --dry-run=client -o yaml"
 # install yq
 apt-get install yq
 yq eval deploy.yaml
+
+# Read the whole question paper in first 5mins
