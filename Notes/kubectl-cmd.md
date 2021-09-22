@@ -1,6 +1,7 @@
 to record action  --record
 kubectl create deploy.yaml --record #to record deploy 
 
+k explain deploy
 K run nginx --image=nginx #pod creation
 K scale deploy <name> —replicas=2
 K create -help

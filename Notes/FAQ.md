@@ -3,7 +3,7 @@ root@controlplane:~# kubectl taint node controlplane node-role.kubernetes.io/mas
 node/controlplane untainted
 
 # label pod with app=jio, can't be done with deploy
-k run jio --image=nginx --labels=app=jio
+k run jio --image=nginx --labels=app=jio,key=value
 
 # Deploy a DaemonSet for FluentD Logging
 k create deploy > deploy.yaml
@@ -48,4 +48,26 @@ ETCDCTL_API=3 etcdctl snapshot restore /opt/snapshot-pre-boot.db --data-dir="/ro
       type: DirectoryOrCreate
     name: etcd-data
 
-# 
+# if no scheduler directly add a pod to node
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  nodeName: node01
+  containers:
+  -  image: nginx
+     name: nginx
+
+
+# find static pod location in other node
+ps -aux | grep kubelet #check for --config location
+
+# multiple scheduler
+- --leader-elect=false
+- --port=10282
+- --scheduler-name=my-scheduler
+- --secure-port=0
+https://kubernetes.io/docs/tasks/extend-kubernetes/configure-multiple-schedulers/
+
