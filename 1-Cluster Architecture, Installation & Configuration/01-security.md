@@ -3,7 +3,7 @@
 -----------
 # Api server 
 -----------
-it supports auth via - static password, static tokens, certificates, 3rd part ldap etc
+it supports auth via - static password, static tokens, certificates, 3rd party ldap etc..
 authentication via  serviceAccount (for machines)
 
 
@@ -16,7 +16,7 @@ user-details.csv
 user-details-token.csv
 [user1,token1,user1_id,groupid]
 ------------------------
-Kube api pod env variable [not used]
+Kube api pod env variable [this method not used]
 -- basic-auth-file=user-details.csv #for static pass, envVariable of apiserver 
 curl <kube-api> -u user:pass  #for access to kubeAPI
 
@@ -31,5 +31,5 @@ curl <kube-api> --header "Authorization : Bearer TOKEN"
  - --authorization-mode=Node,RBAC
 curl <kube-api> --key admin.key --cert admin.cert --cacert ca.cert 
  #to call server, these details can be 
-==> moved the above to a file, we get "kube-config" file  this is used by kubectl to authenticate
+==> move above to a file, we get "kube-config" file  this is used by kubectl to authenticate
 

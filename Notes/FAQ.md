@@ -71,3 +71,10 @@ ps -aux | grep kubelet #check for --config location
 - --secure-port=0
 https://kubernetes.io/docs/tasks/extend-kubernetes/configure-multiple-schedulers/
 
+# At what address can you reach the ETCD cluster from the controlplane node?
+--listen-client-urls
+
+# redo 
+https://kodekloud.com/topic/practice-test-backup-and-restore-methods-2/
+
+https://kodekloud.com/topic/practice-test-certificates-api-2/

@@ -23,3 +23,6 @@ clusterrole & clusterrolebinding
 #securitycontext
 both pod level and container level 
 to run pod with specific user, give access to volume 
+
+# view cert
+openssl x509 -in apiserver.crt -text -noout
