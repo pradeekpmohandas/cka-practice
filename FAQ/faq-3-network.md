@@ -13,6 +13,7 @@ arp <node-name>
 
 # What is the port the kube-scheduler is listening on in the controlplane node?
 netstat -nplt
+--- 
 listening server sockets -l
 program names -p
 tcp -t

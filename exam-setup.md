@@ -4,8 +4,8 @@ alias kdelete="kubectl delete --grace-period=0 --force"
 alias kdry="kubectl --dry-run=client -o yaml"
 
 
-# install yq
+# install yq #not needed
 apt-get install yq
 yq eval deploy.yaml
 
-# Read the whole question paper in first 5mins
+# read all the questions  in first 5mins, attend easy first
