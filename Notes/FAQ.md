@@ -78,3 +78,32 @@ https://kubernetes.io/docs/tasks/extend-kubernetes/configure-multiple-schedulers
 https://kodekloud.com/topic/practice-test-backup-and-restore-methods-2/
 
 https://kodekloud.com/topic/practice-test-certificates-api-2/
+
+
+# imp
+kubectl api-resources -o wide
+k get nodes --as michelle
+
+# network policy
+ - ports:
+    - port: 53
+      protocol: UDP
+    - port: 53
+      protocol: TCP
+Note: We have also allowed Egress traffic to TCP and UDP port. This has been added to ensure that the internal DNS resolution works from the internal pod. Remember: The kube-dns service is exposed on port 53:
+
+
+# install using kubeadm
+kubeadm init --pod-network-cidr 10.244.0.0/16 --apiserver-advertise-address=192.168.56.2(ip of control plane)
+
+
+# kubelet location
+/var/lib/kubelet/config
+
+# check which port is being used
+netstat -tulpn
+
+# Create a new deployment called nginx-deploy, with image nginx:1.16 and 1 replica. Next upgrade the deployment to version 1.17 using rolling update. Make sure that the version upgrade is recorded in the resource annotation.
+kubectl set image deployment/nginx-deploy nginx-deploy=nginx:1.17 --record
+
+
