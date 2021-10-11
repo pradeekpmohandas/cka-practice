@@ -1,5 +1,5 @@
 # CPU | MEMORY(ram) | Disk space
-mini request : 
+min request : 
 CPU: .5  MEMORY: 256Mi 
 minimum : 1m
 1 = 100m (milli cpu)
