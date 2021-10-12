@@ -1,5 +1,6 @@
 to record action  --record
 kubectl create deploy.yaml --record #to record deploy 
+k run pod --record #works
 
 k explain deploy
 K run nginx --image=nginx #pod creation
@@ -53,12 +54,12 @@ k proxy #start a proxy server on localhost with credentials supplied by kubeconf
 
 
 k auth can-i  <delete deploy> 
-k auth can-i  <delete deploy>  —as <dev-user -userName>
+k auth can-i  <delete deploy>  -—as <dev-user -userName>
 
 
 k set image po redis <redis container name>=redis
 k auth can-i  <delete deploy> 
-k auth can-i  <delete deploy>  —as <dev-user -userName>
+k auth can-i  <delete deploy>  -—as <dev-user -userName>
 
 
 ##########################  CORE  #######################

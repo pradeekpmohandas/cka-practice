@@ -15,5 +15,4 @@
 <esc> /search   #anyitem to search
 <esc> gg        #begining of line
 <esc> G         #end of line
-
 ---
