@@ -6,6 +6,8 @@ sbin- system binary location
 journalctl  <status/start/stop/restart> <serviceName>
 systemctl <status/start/stop/restart>  <serviceName>
 
+systemctl daemon-reload && systemctl restart kubelet
+
 # to check logs
 journalctl -u <SERVICE> -f
 systemctl start <service> -l 

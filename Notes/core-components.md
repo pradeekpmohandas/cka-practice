@@ -10,7 +10,7 @@ kubelet - agent on each node
 etcd cluster
 core-dns : dns server for the cluster | not deamon set | save (service-name | service-ip)
 kubectl - client to access cluster
-netowrk-solution - seperate deploy - calico/fannel/netD/weave. creates a network and responsible to assign the ip to the pod/svc.
+netowrk-solution - seperate deploy - calico/fannel/netD/weave. creates a network and responsible to assign the ip to the pod/svc. /etc/cni/net.d/
 
 
 # extra notes
